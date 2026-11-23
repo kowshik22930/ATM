@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Banking</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section id="loginView" class="login-card">
+      <div class="brand"><span class="brand-icon">₹</span><span>ATM<span class="muted"> BANK</span></span></div>
+      <p class="eyebrow">SECURE SELF-SERVICE BANKING</p>
+      <h1>Welcome back</h1>
+      <p class="subheading">Enter your account details to access your ATM.</p>
+      <form id="loginForm">
+        <label for="accountNumber">Account number</label>
+        <input id="accountNumber" autocomplete="username" inputmode="numeric" placeholder="Enter account number" required>
+        <label for="pin">4-digit ATM PIN</label>
+        <input id="pin" type="password" maxlength="4" inputmode="numeric" autocomplete="current-password" placeholder="••••" required>
+        <button class="primary full" type="submit">Login securely <span>→</span></button>
+      </form>
+      <p class="demo-note">Demo login: Account <b>1001</b> · PIN <b>1234</b></p>
+      <p id="loginMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="dashboardView" class="dashboard hidden">
+      <header class="topbar">
+        <div class="brand"><span class="brand-icon">₹</span><span>ATM<span class="muted"> BANK</span></span></div>
+        <button id="logoutButton" class="quiet-button">Log out ↗</button>
+      </header>
+      <div class="welcome">
+        <div><p class="eyebrow">YOUR ACCOUNT</p><h1>Hello, <span id="holderName">Customer</span></h1><p class="subheading">Manage your money securely.</p></div>
+        <div class="account-tag">● <span id="accountType">SAVINGS</span></div>
+      </div>
+
+      <section class="balance-card">
+        <div><p class="balance-label">AVAILABLE BALANCE</p><p class="balance-value" id="balance">₹0.00</p><p class="account-number">Account · <span id="accountDisplay"></span></p></div>
+        <div class="card-symbol">₹</div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel actions-panel">
+          <div class="panel-heading"><div><p class="eyebrow">QUICK ACTIONS</p><h2>What would you like to do?</h2></div></div>
+          <div class="action-tabs">
+            <button class="action-tab active" data-action="deposit">＋ Deposit</button>
+            <button class="action-tab" data-action="withdraw">－ Withdraw</button>
+            <button class="action-tab" data-action="changePin">⌑ Change PIN</button>
+          </div>
+          <form id="moneyForm">
+            <label id="amountLabel" for="amount">Deposit amount (₹)</label>
+            <input id="amount" type="number" min="0.01" step="0.01" placeholder="e.g. 1000" required>
+            <button class="primary full" id="moneyButton" type="submit">Deposit money →</button>
+          </form>
+          <form id="pinForm" class="hidden">
+            <label for="oldPin">Current PIN</label><input id="oldPin" type="password" maxlength="4" inputmode="numeric" required>
+            <label for="newPin">New 4-digit PIN</label><input id="newPin" type="password" maxlength="4" inputmode="numeric" required>
+            <button class="primary full" type="submit">Update PIN →</button>
+          </form>
+          <p id="actionMessage" class="message" aria-live="polite"></p>
+        </div>
+
+        <div class="panel transactions-panel">
+          <div class="panel-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>Transactions</h2></div><button id="refreshButton" class="refresh">↻</button></div>
+          <div id="transactions" class="transactions"><p class="empty">Your recent transactions will appear here.</p></div>
+        </div>
+      </section>
+      <footer>For demonstration and learning only · Do not use for real banking.</footer>
+    </section>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>

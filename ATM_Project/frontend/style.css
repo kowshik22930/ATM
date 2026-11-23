@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{font-family:'DM Sans',sans-serif;color:#18231f;background:#f3f6f4;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 10% 5%,#e3f0e8 0,transparent 30%),#f4f6f5}
+button,input{font:inherit}
+.shell{width:min(1080px,calc(100% - 36px));margin:42px auto}
+.login-card{width:min(440px,100%);margin:7vh auto;background:#fff;padding:38px;border:1px solid #e7ece8;border-radius:22px;box-shadow:0 18px 55px #193d2a0d}
+.brand{display:flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-size:17px;font-weight:800;letter-spacing:.4px}
+.brand-icon{width:34px;height:34px;border-radius:11px;background:#176b4a;color:white;display:grid;place-items:center;font-size:21px}
+.muted{color:#7c8982}.eyebrow{font-size:10px;letter-spacing:1.5px;font-weight:700;color:#6a8275;margin:0 0 9px}
+.login-card>.eyebrow{margin-top:42px}
+h1,h2{font-family:Manrope,sans-serif;margin:0;letter-spacing:-.8px}
+h1{font-size:30px}h2{font-size:18px}
+.subheading{color:#78847e;font-size:13px;margin:9px 0 27px}
+label{display:block;font-size:12px;font-weight:700;margin:17px 0 8px}
+input{width:100%;padding:13px 14px;border:1px solid #dce5df;border-radius:9px;outline:none;background:#fbfcfb;color:#18231f}
+input:focus{border-color:#25845e;box-shadow:0 0 0 3px #25845e17}
+.primary{border:0;background:#176b4a;color:white;padding:13px 16px;border-radius:9px;font-weight:700;cursor:pointer;margin-top:19px}
+.primary:hover{background:#10563b}.full{width:100%}.primary span{float:right}
+.demo-note{background:#f0f6f2;color:#61756a;padding:12px;border-radius:8px;font-size:11px;margin-top:23px}
+.message{font-size:12px;min-height:17px;color:#b43c3c}.message.success{color:#16704a}
+.hidden{display:none!important}
+.dashboard{background:#f8faf8;border:1px solid #e7ece8;border-radius:22px;padding:28px;box-shadow:0 18px 55px #193d2a0a}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding-bottom:23px;border-bottom:1px solid #e9eeea}
+.quiet-button,.refresh{background:transparent;border:1px solid #dfe7e1;border-radius:8px;padding:9px 13px;color:#52635a;cursor:pointer}
+.welcome{display:flex;justify-content:space-between;align-items:center;margin:28px 0 20px}
+.welcome .subheading{margin-bottom:0}.account-tag{font-size:10px;font-weight:700;letter-spacing:1px;color:#176b4a;background:#e8f3ec;padding:9px 12px;border-radius:30px}
+.balance-card{background:linear-gradient(120deg,#14583f,#20825b);border-radius:17px;padding:26px 30px;color:white;display:flex;justify-content:space-between;align-items:center;min-height:170px;box-shadow:0 12px 25px #176b4a24}
+.balance-label{font-size:10px;letter-spacing:1.4px;color:#c5e2d1;font-weight:700;margin:0 0 10px}.balance-value{font:800 36px Manrope;margin:0}.account-number{font-size:11px;color:#c5e2d1;margin:9px 0 0}.card-symbol{font-size:56px;color:#ffffff38;font-family:Manrope;font-weight:800}
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.panel{background:white;border:1px solid #e8ede9;border-radius:15px;padding:22px;min-width:0}
+.panel-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.action-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+.action-tab{border:1px solid #e3eae5;background:#fff;color:#65736b;border-radius:8px;padding:9px 11px;font-size:11px;font-weight:700;cursor:pointer}
+.action-tab.active{background:#eaf4ee;border-color:#cce2d4;color:#176b4a}
+.transactions{display:flex;flex-direction:column;gap:0}.transaction{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #eef1ef}
+.transaction:last-child{border:0}.transaction-title{font-size:12px;font-weight:700}.transaction-date{font-size:10px;color:#89948e;margin-top:4px}.transaction-amount{font-size:12px;font-weight:700;white-space:nowrap}.credit{color:#16704a}.debit{color:#bd5548}.empty{font-size:12px;color:#89948e}
+footer{text-align:center;color:#9aa49e;font-size:10px;padding:22px 0 3px}
+@media(max-width:720px){.shell{margin:18px auto}.dashboard{padding:17px}.content-grid{grid-template-columns:1fr}.welcome{align-items:flex-start;gap:12px}.balance-value{font-size:29px}.login-card{padding:26px}.card-symbol{font-size:42px}}
